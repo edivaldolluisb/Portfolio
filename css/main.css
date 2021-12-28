@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Belleza', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+  }
+
+.menu{
+    width: 100%;
+    position: relative;
+}
+.menu ul{
+    width: 40%;
+    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 2rem 2rem 1rem;
+    background-color: #05c46b;
+
+    border-bottom-left-radius: 35px;
+
+}
+.menu ul li {
+    list-style-type: none;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+
+
+}
+.menu li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+}
+
+/* HOME */
+
+.div_nome{
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    clear: both;
+
+    /* Center vertically and horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div_nome > div{
+    width: 60%;
+}
+
+.div_nome > div p{
+    margin-bottom: 1rem;
+}
+.div_nome > div p:nth-child(2){
+    font-size: 2.5rem;
+}
+.div_nome > div p:nth-child(3){
+    font-size: 2rem;
+}
+.div_nome > div p:nth-child(4){
+    line-height: 1.5;
+}
+
+
+
+.citacao {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    background-color: #f0f5ed;
+
+    /* Center vertically and horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.citacao p{
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+.citacao > div{
+    width: 60%;
+}
+
+/*botão skills*/
+.skill_button {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+
+    cursor: pointer;
+   }
+   
+.skill_button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #FFFFFF;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+   }
+   
+.skill_button span {
+    position: relative;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #234567;
+   }
+   
+.skill_button svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+   }
+   
+.skill_button:hover:before {
+    width: 100%;
+    background: #05c46b;
+   }
+   
+.skill_buttona:hover svg {
+    transform: translateX(0);
+   }
+   
+.skill_button:active {
+    transform: scale(0.95);
+   }
+   /*SkILLS*/
+
+   .skills{
+       width: 0%;
+        display: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 50vh;
+        padding-top: 1rem;
+   }
+   .skills div{
+       margin: 1rem;
+       text-align: center;
+       width: 40%;
+    }
+   .skills div i{
+       font-size: 3rem;
+       margin-bottom: 1rem;
+       color: #05c46b;
+    }
+    .skills > div p:nth-child(2){
+        font-size: 1.5rem;
+
+     }
+     .skills > div p:nth-child(3){
+        font-size: 0.9rem;
+     }
+
+   /* WORKS */
+
+   #works{
+       min-height: 100vh;
+       padding: 1rem;
+       
+   }
+   #works h2 {
+       text-align: center;
+       margin: 2rem 0;
+   }
+   .some_works{
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       margin-bottom: 1rem;
+   }
+   .some_works h3{
+       margin-bottom: 0.5rem;
+   }
+   .some_works p{
+        text-align: justify;
+        margin-bottom: 1rem;
+   }
+   .some_works > div{
+    width: 45%;
+    margin: 1rem;
+   }
+
+
+   /* check project button*/
+   .check_works {
+    padding: 1em 2em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+   }
+   
+   .check_works:hover {
+    background-color: #05c46b;
+    box-shadow: 0px 15px 20px #05c46b;
+    color: #000000;
+    transform: translateY(-7px);
+   }
+   
+   .check_works:active {
+    transform: translateY(-1px);
+   }
+   
