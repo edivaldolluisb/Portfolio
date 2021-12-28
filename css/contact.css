@@ -102,6 +102,15 @@
 
 
 
+   /*RESPONSIVIDADE*/
 
-
-
+@media only screen and (max-width: 465px) {
+    .pop_email{
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 597px) {
+    .mail_me{
+        width: 30%;
+    }
+}
