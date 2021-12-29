@@ -3,3 +3,9 @@
     position: absolute;
     z-index: -1;
 }
+
+.ball {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+  }
