@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body  onload="typeWriter()">
     <nav class="menu">
         <div>
             <ul>
@@ -37,7 +37,7 @@
 
             <div>
                 <p>Hi, I'am</p>
-                <p class="nome">Edivaldo Bonfim</p>
+                <p class="nome"></p>
                 <p>I enjoy developing things for web</p>
                 <p>
                     I'm a software developer, with more interest in web development. Currently focused on front-end web
@@ -150,5 +150,19 @@
 
 <script src="./js/main.js"></script>
 <script src="./js/efects.js"></script>
+
+<script>
+    var i = 0;
+    var txt = "Edivaldo Gustavo Bonfim"; /* The text */
+    var speed = 100; /* The speed/duration of the effect in milliseconds */
+
+    function typeWriter() {
+        if (i < txt.length) {
+            document.querySelector(".nome").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+</script>
 
 </html>
