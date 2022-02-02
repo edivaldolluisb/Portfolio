@@ -58,6 +58,8 @@ html {
 }
 .div_nome > div p:nth-child(2){
     font-size: 2.5rem;
+    color: #FFA17A;
+    font-weight: bold;
 }
 .div_nome > div p:nth-child(3){
     font-size: 2rem;
