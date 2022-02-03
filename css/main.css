@@ -175,6 +175,7 @@ html {
     }
 .skills > div p:nth-child(2){
     font-size: 1.5rem;
+    font-weight: bold;
 
     }
 .skills > div p:nth-child(3){
@@ -214,7 +215,7 @@ html {
     margin: 1rem;
 }
 .some_works div h3{
-    color: #FFA17A;
+    color: #D3ED8C;
     font-size: 1.3em;
 }
 
