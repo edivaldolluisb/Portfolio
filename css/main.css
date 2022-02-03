@@ -213,6 +213,10 @@ html {
     width: 45%;
     margin: 1rem;
 }
+.some_works div h3{
+    color: #FFA17A;
+    font-size: 1.3em;
+}
 
 
 /* check project button*/
