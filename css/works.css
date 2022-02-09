@@ -1,0 +1,12 @@
+
+/*tabela*/
+table {
+    border-collapse: collapse;
+    width: 60%;
+    margin: 3rem auto 1rem;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 0.5em;
+  }
