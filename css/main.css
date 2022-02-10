@@ -33,7 +33,7 @@ html {
     border-bottom-left-radius: 30px;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
-    background-color: #05c46b;
+    background-color: #43655A;
 }
 .menu > div ul li {
     list-style: none;
@@ -41,6 +41,12 @@ html {
 .menu ul li a{
     text-decoration: none;
     color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.5s;
+}
+.menu ul li a:hover{
+    color: #3899DB;
 }
 .menu i{
     display: none;
@@ -81,7 +87,7 @@ html {
         border-bottom-left-radius: 0;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
-        background-color: #05c46b;
+        background-color: #43655A;
     }
 
     .menu i{
