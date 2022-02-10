@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="./css/efects.css">
     <link rel="stylesheet" href="./css/teste.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!--google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +23,7 @@
 
 <body>
     <nav class="menu">
-        <div>
+        <div id="ul_menu">
             <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="#works">Recent Works</a></li>
@@ -29,15 +31,79 @@
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </div>
-        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-bars" id="icone_menu"></i>
     </nav>
-    
+    <section id="home">
+        <div class="wrap-2"><canvas id="liquid"></canvas></div>
+
+        <div class="div_nome">
+
+            <div>
+                <p>Hi, I'am</p>
+                <p class="nome"></p>
+                <p>I enjoy developing things for web</p>
+                <p>
+                    I'm a software developer, with more interest in web development. Currently focused on front-end web
+                    development.
+                </p>
+            </div>
+
+        </div>
+        <div class="citacao">
+            <div>
+
+
+                <p>Hello! My name is Edivaldo and I enjoy creating things that live on the internet. My interest in web
+                    development started back in 2019 when I decided to know how web pages are created, and I have
+                    developed my skills and learned a lot about it!</p>
+                <button class="skill_button">
+                    <span>My Skills</span>
+                    <svg width="15px" height="10px" viewBox="0 0 13 10">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+        <div class="skills">
+            <div>
+
+                <i class="fab fa-html5"></i>
+                <p>Front-end</p>
+                <p>HTML, CSS(SASS, BootStrap), <br> JavaScript(Jquery, AJAX) </p>
+
+            </div>
+            <div>
+                <i class="fab fa-python"></i>
+                <p>Python</p>
+                <p>Django</p>
+
+            </div>
+            <div>
+                <i class="fas fa-database"></i>
+                <p>DataBases</p>
+                <p>MySql, SQLite3</p>
+            </div>
+            <div>
+                <i class="fab fa-figma"></i>
+                <p>Design</p>
+                <p>Figma</p>
+            </div>
+        </div>
+
+    </section>
 
 </body>
 
 <script src="./js/main.js"></script>
 <script src="./js/efects.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="./js/menu.js"></script>
 
 
 </html>

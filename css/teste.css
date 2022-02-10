@@ -5,7 +5,6 @@
 .menu{
     width: 100%;
     margin-top: 1rem;
-    margin-right: 1rem;
     position: relative;
 
     display: flex;
@@ -19,9 +18,11 @@
     position: relative;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 1.5rem;
 
     padding: 1.2rem;
+    margin-right: 10rem;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     border-top-right-radius: 30px;
@@ -36,6 +37,7 @@
     color: #fff;
 }
 .menu i{
+    display: none;
     font-size: 1.5rem;
     background-color: #05c46b;
     color: #fff;
@@ -44,15 +46,20 @@
     border-radius: 50%;
     cursor: pointer;
 }
-
+.remover_adicionar-menu{
+    display: none;
+}
 @media screen and (max-width: 660px) {
+
     .menu > div{
+        z-index: 5;
         margin-top: 0;
         position: fixed;
         top: 0;
         bottom: 0;
         left: 0;
-        right: 0;        
+        right: 0;
+        background-color: #fff;        
     }
     .menu > div ul{
         position: absolute;
@@ -70,17 +77,17 @@
         border-bottom-right-radius: 0;
         background-color: #05c46b;
     }
-    .menu > div ul li {
 
-    }
     .menu i{
+        display: block;
         font-size: 1.5rem;
-        background-color: #fff;
-        color: #05c46b;
+        background-color: #05c46b;
+        color: #fff;
         padding: 1rem;
         margin-right: 1rem;
         border-radius: 50%;
         cursor: pointer;
-        z-index: 2;
-    }
+        z-index: 5;
+    }    
+
 }
