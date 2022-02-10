@@ -8,34 +8,49 @@ html {
     scroll-behavior: smooth;
   }
 
-.menu{
+  .menu{
     width: 100%;
+    margin-top: 2rem; /*margem do'menu'*/
     position: relative;
-}
-.menu ul{
-    width: 40%;
-    float: right;
+
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 2rem 2rem 2rem 1rem;
+    align-items: center;
+    gap: 2rem;
+    justify-content: flex-end;
+    
+}
+.menu > div ul{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+
+    padding: 1.2rem;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
     background-color: #05c46b;
-
-    border-bottom-left-radius: 35px;
-
 }
-.menu ul li {
-    list-style-type: none;
-    margin: auto;
-    font-family: 'Roboto', sans-serif;
-
-
+.menu > div ul li {
+    list-style: none;
 }
-.menu li a {
+.menu ul li a{
     text-decoration: none;
     color: #fff;
-    font-size: 1.2rem;
 }
+.menu i{
+    font-size: 1.5rem;
+    background-color: #05c46b;
+    color: #fff;
+    padding: 1rem;
+    margin-right: 2rem;/*margem do'menu'*/
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
 
 /* HOME */
 
@@ -279,16 +294,4 @@ footer{
         width: 80%;
         margin: 1rem;
        }
-    .menu li a {
-        text-decoration: none;
-        font-size: 1.1rem;
-    }
-}
-@media only screen and (max-width: 465px) {
-
-    .menu ul{
-        width: 55%;
-
-    
-    }
 }
