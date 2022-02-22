@@ -30,10 +30,16 @@ html {
     gap: 1.5rem;
 
     padding: 1.2rem;
-    background-color: #43655A;
+    /*background-color: #43655A;*/
 }
 .menu > div ul li {
     list-style: none;
+    background-color: #05c46b;
+    padding: 0.3rem 1rem;
+    border-radius: 2px;
+}
+.menu > div ul li:hover {
+    background-color: #fff;
 }
 .menu ul li a{
     text-decoration: none;
