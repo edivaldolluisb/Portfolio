@@ -90,16 +90,19 @@ html {
         border-bottom-left-radius: 0;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
-        background-color: #43655A;
+        background-color: #05c46b;
     }
 
     .menu i{
         display: block;
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
         font-size: 1.5rem;
         background-color: #05c46b;
         color: #fff;
         padding: 1rem;
-        margin-right: 1rem;
+        /*margin: 1rem auto 1rem 1rem;*/
         border-radius: 50%;
         cursor: pointer;
         z-index: 5;
