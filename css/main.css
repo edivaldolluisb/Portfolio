@@ -10,15 +10,17 @@ html {
 
   .menu{
     width: 100%;
-    margin-top: 1rem;
     position: relative;
 
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 2rem;
-    justify-content: flex-end;
+    /*justify-content: flex-end;*/
     
+}
+#ul_menu{
+    width: 100%;
 }
 .menu > div ul{
     position: relative;
@@ -28,11 +30,6 @@ html {
     gap: 1.5rem;
 
     padding: 1.2rem;
-    margin-right: 10rem;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
     background-color: #43655A;
 }
 .menu > div ul li {
