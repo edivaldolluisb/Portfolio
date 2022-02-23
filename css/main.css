@@ -167,9 +167,13 @@ html {
 }
 .citacao p{
     line-height: 1.5;
-    margin-bottom: 2rem;
+    margin-bottom: 1em;
     color: #fff;
     font-size: 1.1em;
+    text-align: justify;
+}
+.citacao p:last-of-type{
+    margin-bottom: 2rem;
 }
 .citacao > div{
     width: 60%;
