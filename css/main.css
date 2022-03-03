@@ -247,25 +247,25 @@ html {
     height: 70vh;
     padding-top: 1rem;
     background-color: rgb(255, 255, 255, 0.5);
-   }
+}
 .skills div{
     margin: 1rem;
     text-align: center;
     width: 40%;
-    }
+}
 .skills div i{
     font-size: 3rem;
     margin-bottom: 1rem;
     color: #05c46b;
-    }
+}
 .skills > div p:nth-child(2){
     font-size: 1.5rem;
     font-weight: bold;
 
-    }
+}
 .skills > div p:nth-child(3){
     font-size: 0.9rem;
-    }
+}
 
    /* WORKS */
 
