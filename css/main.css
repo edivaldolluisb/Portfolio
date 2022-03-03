@@ -261,6 +261,14 @@ html {
 .skills > div p:nth-child(2){
     font-size: 1.5rem;
     font-weight: bold;
+    color: #234567;
+    transition: color .5s;
+
+}
+.skills > div p:nth-child(2):hover{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3899DB;
 
 }
 .skills > div p:nth-child(3){
