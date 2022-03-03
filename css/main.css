@@ -383,6 +383,12 @@ footer{
         margin: 1rem;
        }
 }
+@media screen and (max-width: 960px) {
+    .citacao > div{
+        width: 80%;
+        margin: 1rem auto;
+    }
+}
 
 
 /* Scroll bar */
