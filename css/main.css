@@ -139,7 +139,7 @@ html {
     font-size: 1.1rem;
 }
 .div_nome > div p:nth-child(2){
-    font-size: 2.5rem;
+    font-size: 2.5em;
     color: #3899DB;
     font-weight: bold;
 }
@@ -383,22 +383,6 @@ footer{
    
 
 
-   /*RESPONSIVIDADE*/
-
-@media only screen and (max-width: 672px) {
-    .some_works > div{
-        width: 80%;
-        margin: 1rem;
-       }
-}
-@media screen and (max-width: 960px) {
-    .citacao > div{
-        width: 80%;
-        margin: 1rem auto;
-    }
-}
-
-
 /* Scroll bar */
 
 /* width */
@@ -420,3 +404,33 @@ footer{
   ::-webkit-scrollbar-thumb:hover {
     background: #3899DB; 
   }
+
+/*RESPONSIVIDADE*/
+
+@media only screen and (max-width: 672px) {
+    .some_works > div{
+        width: 80%;
+        margin: 1rem;
+    }
+}
+@media screen and (max-width: 960px) {
+    .citacao > div{
+        width: 80%;
+        margin: 1rem auto;
+    }
+}
+
+@media screen and (max-width: 532px) {
+    .div_nome > div p:nth-child(2){
+        font-size: 1.65em;
+    }
+    .div_nome > div p{
+        font-size: 1em;
+    }
+    .div_nome > div p:nth-child(3){
+        font-size: 1.8em;
+    }
+    .div_nome{
+        padding-top: 4rem;
+    }
+}
