@@ -1,194 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Edivaldo Bonfim</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edivaldo Bonfim</title>
+		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="stylesheet" href="./css/efects.css" />
 
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/efects.css">
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+			integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!--google fonts-->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Belleza&family=Roboto:wght@300&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
 
-    <!--google fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Roboto:wght@300&display=swap" rel="stylesheet">
-</head>
+	<body onload="typeWriter()">
+		<nav class="menu">
+			<div id="ul_menu">
+				<ul>
+					<li><a href="./index.html">Home</a></li>
+					<li><a href="#works">Recent Works</a></li>
+					<li><a href="./works.html">My Works</a></li>
+					<li><a href="./contact.html">Contact</a></li>
+				</ul>
+			</div>
+			<i class="fa-solid fa-bars" id="icone_menu"></i>
+		</nav>
+		<section id="home">
+			<div class="wrap-2"><canvas id="liquid"></canvas></div>
 
-<body onload="typeWriter()">
-    <nav class="menu">
-        <div id="ul_menu">
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="#works">Recent Works</a></li>
-                <li><a href="./works.html">My Works</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </div>
-        <i class="fa-solid fa-bars" id="icone_menu"></i>
-    </nav>
-    <section id="home">
-        <div class="wrap-2"><canvas id="liquid"></canvas></div>
+			<div class="div_nome">
+				<div>
+					<p>Hi, I'am</p>
+					<p class="nome"></p>
+					<p>I enjoy developing things for web</p>
+					<p>  
+						I'm a software developer, with more interest in web
+						development. Currently focused on front-end web
+						development.
+					</p>
+				</div>
+			</div>
+			<div class="citacao">
+				<div>
+					<p>
+						Interested in the entire frontend spectrum and working
+						on amazings projects with great and positive people.
+					</p>
+					<button class="skill_button">
+						<span>My Skills</span>
+						<svg width="15px" height="10px" viewBox="0 0 13 10">
+							<path d="M1,5 L11,5"></path>
+							<polyline points="8 1 12 5 8 9"></polyline>
+						</svg>
+					</button>
+				</div>
+			</div>
+			<div class="skills">
+				<div>
+					<i class="fab fa-html5"></i>
+					<p>Front-end</p>
+					<p>
+						HTML, CSS(SASS, BootStrap), <br />
+						JavaScript(Jquery, AJAX)
+					</p>
+				</div>
+				<div>
+					<i class="fab fa-python"></i>
+					<p>Python</p>
+					<p>Django</p>
+				</div>
+				<div>
+					<i class="fas fa-database"></i>
+					<p>DataBases</p>
+					<p>MySql, SQLite3</p>
+				</div>
+				<div>
+					<i class="fab fa-figma"></i>
+					<p>Design</p>
+					<p>Figma</p>
+				</div>
+			</div>
+		</section>
+		<section id="works">
+			<h2>My recent works</h2>
+			<div class="some_works">
+				<div>
+					<h3>Reen Óticas</h3>
+					<p>
+						It is a university project for the creation of a website
+						for an ophthalmology clinic, in which it is possible to
+						schedule an appointment, shop for ophthalmology
+						products, and a blog session with articles related to
+						eye health.
+					</p>
 
-        <div class="div_nome">
+					<p>Tecnologies: HTML, CSS, AJAX, Python-Django, MySQL</p>
 
-            <div>
-                <p>Hi, I'am</p>
-                <p class="nome"></p>
-                <p>I enjoy developing things for web</p>
-                <p>
-                    I'm a software developer, with more interest in web development. Currently focused on front-end web
-                    development.
-                </p>
-            </div>
+					<a
+						href="https://github.com/edivaldolluisb/REEM_Oticas"
+						class="check_works"
+						>Check</a
+					>
+				</div>
+				<div>
+					<h3>Reen Óticas Template</h3>
+					<p>
+						It is the template for a university project for the
+						creation of a website for an ophthalmology clinic, in
+						which it is possible to schedule an appointment, shop
+						for ophthalmology products, and a blog session with
+						articles related to eye health.
+					</p>
 
-        </div>
-        <div class="citacao">
-            <div>
+					<p>Tecnologies: HTML, CSS, JS</p>
 
+					<a
+						href="https://github.com/edivaldolluisb/REEM_Oticas_Template"
+						class="check_works"
+						>Check</a
+					>
+				</div>
+				<div>
+					<h3>Ani-Mangalist</h3>
+					<p>
+						A web application to store data of animes (cartoons) and
+						mangas (comics made in Japanese style) that are produced
+						in japan.
+					</p>
 
-                <p>Hello! My name is Edivaldo and I enjoy creating things that live on the internet. My interest in web
-                    development started back in 2019 when I decided to know how web pages are created, and I have
-                    developed my skills and learned a lot about it!
-                </p>
-                <p>
-                    I'm a Front-End Developer located in Portugal. I have a serious passion for UI effects, animations
-                    and creating intuitive, dynamic user experiences.
-                </p>
-                <p>
-                    Interested in the entire frontend spectrum and working on amazings projects with great and positive
-                    people.
-                </p>
-                <button class="skill_button">
-                    <span>My Skills</span>
-                    <svg width="15px" height="10px" viewBox="0 0 13 10">
-                        <path d="M1,5 L11,5"></path>
-                        <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                </button>
-            </div>
+					<p>Tecnologies: HTML, CSS, Python-Django, MySQL, SQLite3</p>
 
-        </div>
-        <div class="skills">
-            <div>
+					<a
+						href="https://github.com/edivaldolluisb/Ani-Mangalist-Django"
+						class="check_works"
+						>Check</a
+					>
+				</div>
+				<div>
+					<h3>Ani-Mangalist Template</h3>
+					<p>
+						Template for a web application to store data of animes
+						(cartoons) and mangas (comics made in Japanese style)
+						that are produced in japan.
+					</p>
 
-                <i class="fab fa-html5"></i>
-                <p>Front-end</p>
-                <p>HTML, CSS(SASS, BootStrap), <br> JavaScript(Jquery, AJAX) </p>
+					<p>Tecnologies: HTML, CSS, JS</p>
 
-            </div>
-            <div>
-                <i class="fab fa-python"></i>
-                <p>Python</p>
-                <p>Django</p>
+					<a
+						href="https://github.com/edivaldolluisb/Ani-Mangalist-Template"
+						class="check_works"
+						>Check</a
+					>
+				</div>
+				<div>
+					<h3>Santo Coisas</h3>
+					<p>
+						Template for an e-commerce for selling national
+						products.
+					</p>
 
-            </div>
-            <div>
-                <i class="fas fa-database"></i>
-                <p>DataBases</p>
-                <p>MySql, SQLite3</p>
-            </div>
-            <div>
-                <i class="fab fa-figma"></i>
-                <p>Design</p>
-                <p>Figma</p>
-            </div>
-        </div>
+					<p>Tecnologies: HTML, CSS, JS</p>
 
-    </section>
-    <section id="works">
+					<a
+						href="https://github.com/edivaldolluisb/atalhoscompra"
+						class="check_works"
+						>Check</a
+					>
+				</div>
+			</div>
+			<div id="seeall">
+				<a href="./works.html">See all my work</a>
+			</div>
+		</section>
+		<footer>
+			<div class="footer_icons">
+				<a
+					href="https://github.com/edivaldolluisb"
+					target="_blank"
+					rel="noopener noreferrer"
+					><i class="fab fa-github"></i
+				></a>
+				<a
+					href="https://www.instagram.com/edicastroluis/"
+					target="_blank"
+					rel="noopener noreferrer"
+					><i class="fab fa-instagram"></i
+				></a>
+			</div>
+		</footer>
+	</body>
 
-        <h2>My recent works</h2>
-        <div class="some_works">
-            <div>
-                <h3>Reen Óticas</h3>
-                <p>It is a university project for the creation of a website for an ophthalmology clinic, in which it is possible to schedule an appointment, shop for ophthalmology products, and a blog session with articles related to eye health.</p>
+	<script src="./js/main.js"></script>
+	<script src="./js/efects.js"></script>
 
-                <p>Tecnologies: HTML, CSS, AJAX, Python-Django, MySQL</p>
+	<script>
+		var i = 0;
+		var txt = "Edivaldo Gustavo Bonfim"; /* The text */
+		var speed = 100; /* The speed/duration of the effect in milliseconds */
 
-                <a href="https://github.com/edivaldolluisb/REEM_Oticas"
-                    class="check_works">Check</a>
-            </div>
-            <div>
-                <h3>Reen Óticas Template</h3>
-                <p>It is the template for a university project for the creation of a website for an ophthalmology
-                    clinic, in which it is possible to schedule an appointment, shop for ophthalmology products, and a
-                    blog session with articles related to eye health.</p>
-
-                <p>Tecnologies: HTML, CSS, JS</p>
-
-                <a href="https://github.com/edivaldolluisb/REEM_Oticas_Template" class="check_works">Check</a>
-
-            </div>
-            <div>
-                <h3>Ani-Mangalist</h3>
-                <p>A web application to store data of animes (cartoons) and mangas (comics made in Japanese style) that
-                    are produced in japan.</p>
-
-                <p>Tecnologies: HTML, CSS, Python-Django, MySQL, SQLite3</p>
-
-                <a href="https://github.com/edivaldolluisb/Ani-Mangalist-Django" class="check_works">Check</a>
-            </div>
-            <div>
-                <h3>Ani-Mangalist Template</h3>
-                <p>Template for a web application to store data of animes (cartoons) and mangas (comics made in Japanese
-                    style) that are produced in japan.</p>
-
-                <p>Tecnologies: HTML, CSS, JS</p>
-
-                <a href="https://github.com/edivaldolluisb/Ani-Mangalist-Template" class="check_works">Check</a>
-            </div>
-            <div>
-                <h3>Santo Coisas</h3>
-                <p>Template for an e-commerce for selling national products.</p>
-
-                <p>Tecnologies: HTML, CSS, JS</p>
-
-                <a href="https://github.com/edivaldolluisb/atalhoscompra" class="check_works">Check</a>
-            </div>
-
-
-        </div>
-        <div id="seeall">
-            <a href="./works.html">See all my work</a>
-        </div>
-
-    </section>
-    <footer>
-        <div class="footer_icons">
-            <a href="https://github.com/edivaldolluisb" target="_blank" rel="noopener noreferrer"><i
-                    class="fab fa-github"></i></a>
-            <a href="https://www.instagram.com/edicastroluis/" target="_blank" rel="noopener noreferrer"><i
-                    class="fab fa-instagram"></i></a>
-        </div>
-    </footer>
-
-</body>
-
-<script src="./js/main.js"></script>
-<script src="./js/efects.js"></script>
-
-<script>
-    var i = 0;
-    var txt = "Edivaldo Gustavo Bonfim"; /* The text */
-    var speed = 100; /* The speed/duration of the effect in milliseconds */
-
-    function typeWriter() {
-        if (i < txt.length) {
-            document.querySelector(".nome").innerHTML += txt.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
-        }
-    }
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="./js/menu.js"></script>
-
+		function typeWriter() {
+			if (i < txt.length) {
+				document.querySelector(".nome").innerHTML += txt.charAt(i);
+				i++;
+				setTimeout(typeWriter, speed);
+			}
+		}
+	</script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"
+	></script>
+	<script src="./js/menu.js"></script>
 </html>
