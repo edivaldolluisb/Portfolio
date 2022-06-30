@@ -78,6 +78,7 @@
               s = this.marchingSquares(s)
           } while (s);
           this.paint && (a.fill(), a.closePath(), a.beginPath(), this.paint = !1)
+          
       }
   };
   var r = function(t, i, s, h, e) {
