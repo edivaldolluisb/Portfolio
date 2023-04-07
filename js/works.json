@@ -1,0 +1,60 @@
+{
+    "works": [
+        {
+            "year": "2022",
+            "title": "REEM Oticas",
+            "built_with":["HTML","CSS","JS","Django","MySQL"],
+            "link": {
+                "show": true,
+                "site": "https://rem-oticas.herokuapp.com/",
+                "git_hub": "https://github.com/edivaldolluisb/REEM_Oticas"
+            },
+            "show_recents": true
+        },
+        {
+            "year": "2022",
+            "title": "Comida p'ra todos",
+            "built_with":["HTML","CSS","JS","JQuery"],
+            "link": {
+                "show": true,
+                "site": "https://edivaldolluisb.github.io/comida_ptodos/",
+                "git_hub": "https://github.com/edivaldolluisb/comida_ptodos"
+            },
+            "show_recents": true
+        },
+        {
+            "year": "2022",
+            "title": "Formula 1",
+            "built_with":["HTML","CSS","JS","JQuery","Bootstrap","Knockout"],
+            "link": {
+                "show": true,
+                "site": "",
+                "git_hub": "https://github.com/edivaldolluisb/Formula_1"
+            },
+            "show_recents": true
+        },
+        {
+            "year": "2021",
+            "title": "Ani Mangalist",
+            "built_with":["HTML","CSS","JS","Django","MySQL"],
+            "link": {
+                "show": true,
+                "site": "",
+                "git_hub": "https://github.com/edivaldolluisb/Ani-Mangalist-Django"
+            },
+            "show_recents": true
+        },
+        {
+            "year": "2021",
+            "title": "Santo Coisas",
+            "built_with":["HTML","CSS","JS","Node","MySQL"],
+            "link": {
+                "show": true,
+                "site": "",
+                "git_hub": ""
+            },
+            "show_recents": true
+        }
+
+    ]
+}
