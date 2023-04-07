@@ -32,28 +32,23 @@ readfromJson()
 // get the works data and create a table row for each work
 let recentWorks = document.querySelector('.some_works');
 function listRecent(array) {
-    //console.log(array)
-    recentWorks.innerHTML = "";
-    for (const work of array) {
-        if (work.show_recents === false) {
-            continue;
-        }
-        recentWorks.innerHTML += `
+    const recents = array
+      .filter((work) => work.show_recents !== false)
+      .map((work) => `
         <div>
-            <h3>${work.title}</h3>
-            <p>
-                ${work.description}
-            </p>
-
-            <p>Tecnologies: ${work.built_with.join(" • ")}</p>
-            <div class="extern_links">
+          <h3>${work.title}</h3>
+          <p>${work.description}</p>
+          <p>Tecnologies: ${work.built_with.join(" • ")}</p>
+          <div class="extern_links">
             ${show_links(work.link)}
-            </div>
-           
+          </div>
         </div>
-        `
-    }
-}
+      `)
+      .join("");
+  
+    recentWorks.innerHTML = recents;
+  }
+  
 
 //function to show the links to the work
 function show_links(link) {
