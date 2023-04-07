@@ -312,7 +312,21 @@ html {
     color: #D3ED8C;
     font-size: 1.3em;
 }
-
+.extern_links{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.extern_links a{
+    text-decoration: none;
+    color: #234567;
+    font-size: 1.5em;
+    transition: all 1s;
+}
+.extern_links a:hover{
+    color: #fff;
+    font-size: 1.7em;
+}
 /* check project button*/
 .check_works {
     padding: 1em 2em;

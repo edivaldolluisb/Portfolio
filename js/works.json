@@ -1,26 +1,52 @@
 {
     "works": [
         {
+            "year": "2023",
+            "title": "Braian Beats",
+            "built_with":["HTML","CSS","JS"],
+            "link": {
+                "show": true,
+                "site": "",
+                "git_hub": ""
+            },
+            "show_recents": true,
+            "description": "This portfolio showcases the work of a talented beatmaker, demonstrating their ability to produce unique and innovative beats. With a variety of tracks ranging from classic hip hop to modern trap, the portfolio highlights the artist's versatility and their ability to create music that adapts to different styles and genres."
+        },
+        {
+            "year": "2023",
+            "title": "NLEI",
+            "built_with":["Python","Figma","HTML","CSS","JS","Django","PostgreSQL"],
+            "link": {
+                "show": true,
+                "site": "",
+                "git_hub": ""
+            },
+            "show_recents": true,
+            "description": "Official platform of the Computer Engineering Degree Program, aimed at facilitating the management of resources, grades, information about the course, and the course calendar."
+        },
+        {
             "year": "2022",
             "title": "REEM Oticas",
-            "built_with":["HTML","CSS","JS","Django","MySQL"],
+            "built_with":["Figma","HTML","CSS","JS","Django","MySQL"],
             "link": {
                 "show": true,
                 "site": "https://rem-oticas.herokuapp.com/",
                 "git_hub": "https://github.com/edivaldolluisb/REEM_Oticas"
             },
-            "show_recents": true
+            "show_recents": true,
+            "description": "It is a university project for the creation of a website for an ophthalmology clinic, in which it is possible to schedule an appointment, shop for ophthalmology products, and a blog session with articles related to eye health."
         },
         {
             "year": "2022",
             "title": "Comida p'ra todos",
-            "built_with":["HTML","CSS","JS","JQuery"],
+            "built_with":["Figma","HTML","CSS","JS","JQuery"],
             "link": {
                 "show": true,
                 "site": "https://edivaldolluisb.github.io/comida_ptodos/",
                 "git_hub": "https://github.com/edivaldolluisb/comida_ptodos"
             },
-            "show_recents": true
+            "show_recents": true,
+            "description": "Implementation of the front-end of the academic project Comida P'ra Todos, which aims to reduce food waste, since this waste exacerbates food insecurity, malnutrition and water use at a time when hunger in the world is increasing"
         },
         {
             "year": "2022",
@@ -31,7 +57,8 @@
                 "site": "",
                 "git_hub": "https://github.com/edivaldolluisb/Formula_1"
             },
-            "show_recents": true
+            "show_recents": false,
+            "description": ""
         },
         {
             "year": "2021",
@@ -42,7 +69,8 @@
                 "site": "",
                 "git_hub": "https://github.com/edivaldolluisb/Ani-Mangalist-Django"
             },
-            "show_recents": true
+            "show_recents": false,
+            "description": "A web application to store data of animes (cartoons) and mangas (comics made in Japanese style) that are produced in japan."
         },
         {
             "year": "2021",
@@ -53,7 +81,8 @@
                 "site": "",
                 "git_hub": ""
             },
-            "show_recents": true
+            "show_recents": false,
+            "description": "An e-commerce for selling national products."
         }
 
     ]
