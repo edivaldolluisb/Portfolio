@@ -1,107 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Edivaldo Bonfim</title>
 
-		<link rel="stylesheet" href="./css/main.css" />
-		<link rel="stylesheet" href="./css/efects.css" />
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Edivaldo Bonfim</title>
 
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-			integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
+	<link rel="stylesheet" href="./css/main.css" />
+	<link rel="stylesheet" href="./css/efects.css" />
 
-		<!--google fonts-->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Belleza&family=Roboto:wght@300&display=swap"
-			rel="stylesheet"
-		/>
-	</head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+		integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-	<body onload="typeWriter()">
-		<nav class="menu">
-			<div id="ul_menu">
-				<ul>
-					<li><a href="./index.html">Home</a></li>
-					<li><a href="#works">Recent Works</a></li>
-					<li><a href="./works.html">My Works</a></li>
-					<li><a href="./contact.html">Contact</a></li>
-				</ul>
+	<!--google fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Belleza&family=Roboto:wght@300&display=swap"
+		rel="stylesheet" />
+</head>
+
+<body onload="typeWriter()">
+	<nav class="menu">
+		<div id="ul_menu">
+			<ul>
+				<li><a href="./index.html">Home</a></li>
+				<li><a href="#works">Recent Works</a></li>
+				<li><a href="./works.html">My Works</a></li>
+				<li><a href="./contact.html">Contact</a></li>
+			</ul>
+		</div>
+		<i class="fa-solid fa-bars" id="icone_menu"></i>
+	</nav>
+	<section id="home">
+		<div class="wrap-2"><canvas id="liquid"></canvas></div>
+
+		<div class="div_nome">
+			<div>
+				<p class="nome"></p>
+				<p>I enjoy developing things for web</p>
+				<p>
+					Software Engineer & Front end Developer.
+				</p>
+
 			</div>
-			<i class="fa-solid fa-bars" id="icone_menu"></i>
-		</nav>
-		<section id="home">
-			<div class="wrap-2"><canvas id="liquid"></canvas></div>
+			<div>
+				<img src="./images/WeirdBubble1536x792.png" alt="">
+			</div>
+		</div>
+		<div class="citacao">
+			<div>
+				<h2>Technologies</h2>
+				<p>
+					Interested in the entire frontend spectrum and working
+					on amazings projects with great and positive people.
+				</p>
+				<button class="skill_button">
+					<span>My Skills</span>
+					<svg width="15px" height="10px" viewBox="0 0 13 10">
+						<path d="M1,5 L11,5"></path>
+						<polyline points="8 1 12 5 8 9"></polyline>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div class="skills">
+			<div>
+				<div class="edit">Front-end</div>
 
-			<div class="div_nome">
-				<div>
-					<p>Hi, I'am</p>
-					<p class="nome"></p>
-					<p>I enjoy developing things for web</p>
-					<p>  
-						I'm a software developer, with more interest in web
-						development. Currently focused on front-end web
-						development.
-					</p>
-				</div>
+				<h3>
+					<div class="goo" contenteditable="true">HTML, CSS(SASS, BootStrap),
+						JavaScript(Jquery, AJAX)<br>ReactJS.</div>
+				</h3>
+				<div class="edit">Design</div>
+
+				<h3>
+					<div class="goo" contenteditable="true">Figma</div>
+				</h3>
+				<div class="edit">Programming Languages</div>
+
+				<h3>
+					<div class="goo" contenteditable="true">Python, JavaScript, Java, C</div>
+				</h3>
+				<div class="edit">DataBases</div>
+
+				<h3>
+					<div class="goo" contenteditable="true">PostgreSQL, MySql, <br>SQLite3.</div>
+				</h3>
+				<div class="edit">Python</div>
+
+				<h3>
+					<div class="goo" contenteditable="true">Django.</div>
+				</h3>
+
+				<!-- Filter: https://css-tricks.com/gooey-effect/ -->
+				<svg style="visibility: hidden; position: absolute;" width="0" height="0"
+					xmlns="http://www.w3.org/2000/svg" version="1.1">
+					<defs>
+						<filter id="goo">
+							<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+							<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+								result="goo" />
+							<feComposite in="SourceGraphic" in2="goo" operator="atop" />
+						</filter>
+					</defs>
+				</svg>
 			</div>
-			<div class="citacao">
-				<div>
-					<p>
-						Interested in the entire frontend spectrum and working
-						on amazings projects with great and positive people.
-					</p>
-					<button class="skill_button">
-						<span>My Skills</span>
-						<svg width="15px" height="10px" viewBox="0 0 13 10">
-							<path d="M1,5 L11,5"></path>
-							<polyline points="8 1 12 5 8 9"></polyline>
-						</svg>
-					</button>
-				</div>
-			</div>
-			<div class="skills">
-				<div>
-					<i class="fab fa-html5"></i>
-					<p>Front-end</p>
-					<p>
-						HTML, CSS(SASS, BootStrap), <br />
-						JavaScript(Jquery, AJAX)
-					</p>
-				</div>
-				<div>
-					<i class="fab fa-python"></i>
-					<p>Python</p>
-					<p>Django</p>
-				</div>
-				<div>
-					<i class="fas fa-database"></i>
-					<p>DataBases</p>
-					<p>MySql, SQLite3</p>
-				</div>
-				<div>
-					<i class="fab fa-figma"></i>
-					<p>Design</p>
-					<p>Figma</p>
-				</div>
-				<div>
-					<i class="fab fa-java"></i>
-					<p>Java</p>
-				</div>
-			</div>
-		</section>
-		<section id="works">
-			<h2>Some of my works</h2>
-			<div class="some_works">
-				<!--<div>
+
+
+		</div>
+	</section>
+	<section id="works">
+		<div>
+			<h2><span></span>Crafted with love.<span></span></h2>
+			<p>Here are a few design projects I've worked on recently.</p>
+
+		</div>
+		<div class="some_works">
+			<!--<div>
 					<h3>Comida P'ra Todos</h3>
 					<p>
 						Implementation of the front-end of the academic project Comida P'ra Todos, which aims to reduce food waste, since this waste exacerbates food insecurity, malnutrition and water use at a time when hunger in the world is increasing..
@@ -115,51 +132,87 @@
 						>Check</a
 					>
 				</div> -->
+			<div class="">
+				<span>01</span>
+				<div>
+					<span>01</span>
+					<p>NLEI </p>
+					<span>descrição</span>
+				</div>
+				<a class="button_primary" href="#">
+					<span><i class="fa-brands fa-github"></i></span>
+					<svg width="15px" height="10px" viewBox="0 0 13 10">
+						<path d="M1,5 L11,5"></path>
+						<polyline points="8 1 12 5 8 9"></polyline>
+					</svg>
+				</a>
 				
 			</div>
-			<div id="seeall">
-				<a href="./works.html">See all my work</a>
+			<div class="">
+				<span>02</span>
+				<div>
+					<span>02</span>
+					<p>REEM Oticas </p>
+					<span>descrição</span>
+				</div>
+				<a class="button_primary" href="#">
+					<span>View Project</span>
+					<svg width="15px" height="10px" viewBox="0 0 13 10">
+						<path d="M1,5 L11,5"></path>
+						<polyline points="8 1 12 5 8 9"></polyline>
+					</svg>
+				</a>
 			</div>
-		</section>
-		<footer>
-			<div class="footer_icons">
-				<a
-					href="https://github.com/edivaldolluisb"
-					target="_blank"
-					rel="noopener noreferrer"
-					><i class="fab fa-github"></i
-				></a>
-				<a
-					href="https://www.instagram.com/edicastroluis/"
-					target="_blank"
-					rel="noopener noreferrer"
-					><i class="fab fa-instagram"></i
-				></a>
+
+		</div>
+		<div id="seeall">
+			<div>
+
+				<p>THERE'S MORE</p>
+				<a class="button_primary" href="./works.html">
+					<span>view all projects</span>
+					<svg width="15px" height="10px" viewBox="0 0 13 10">
+						<path d="M1,5 L11,5"></path>
+						<polyline points="8 1 12 5 8 9"></polyline>
+					</svg>
+				</a>
 			</div>
-		</footer>
-	</body>
+		</div>
+	</section>
+	<footer>
+		<div>
+			<p>Let's work together.</p>
+			<p>I'm available for freelance work.</p>
+			<a class="button_primary sayhello" href="./contact.html">
+				<span>SAY HELLO</span>
+				<svg width="15px" height="10px" viewBox="0 0 13 10">
+					<path d="M1,5 L11,5"></path>
+					<polyline points="8 1 12 5 8 9"></polyline>
+				</svg>
+			</a>
+		</div>
+	</footer>
+</body>
 
-	<script src="./js/main.js"></script>
-	<script src="./js/efects.js"></script>
+<!--<script src="./js/main.js"></script>-->
+<script src="./js/efects.js"></script>
 
-	<script>
-		var i = 0;
-		var txt = "Edivaldo Bonfim"; /* The text */
-		var speed = 100; /* The speed/duration of the effect in milliseconds */
+<script>
+	var i = 0;
+	var txt = "Edivaldo Bonfim"; /* The text */
+	var speed = 100; /* The speed/duration of the effect in milliseconds */
 
-		function typeWriter() {
-			if (i < txt.length) {
-				document.querySelector(".nome").innerHTML += txt.charAt(i);
-				i++;
-				setTimeout(typeWriter, speed);
-			}
+	function typeWriter() {
+		if (i < txt.length) {
+			document.querySelector(".nome").innerHTML += txt.charAt(i);
+			i++;
+			setTimeout(typeWriter, speed);
 		}
-	</script>
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-		crossorigin="anonymous"
-		referrerpolicy="no-referrer"
-	></script>
-	<script src="./js/menu.js"></script>
+	}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+	integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./js/menu.js"></script>
+
 </html>

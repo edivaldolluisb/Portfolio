@@ -37,7 +37,7 @@ table {
 }
 thead{
     font-weight: bolder;
-    color: #2F4858;
+    color: #363636;
 }
   
 th, td {
@@ -70,7 +70,7 @@ tbody > tr td:nth-child(3) span {
 }
 .extern_git_links i{
     font-size: 20px;
-    color: #2F4858;
+    color: #363636;
 }
 .extern_git_links i:hover{
     color: #3899DB;
@@ -89,7 +89,7 @@ tbody > tr td:nth-child(3) span {
 }
 .redes_contact li i{
     font-size: 25px;
-    color:  #2F4858;
+    color:  #363636;
     transition: var(--transition);
 }
 .redes_contact ul{
@@ -108,7 +108,7 @@ tbody > tr td:nth-child(3) span {
     width: 1px;
     height: 6rem;
     margin: 0px auto;
-    background-color: #2F4858;
+    background-color: #363636;
 }
 
 .email_contact{
@@ -130,7 +130,7 @@ tbody > tr td:nth-child(3) span {
 
 .email_contact a{
     text-decoration: none;
-    color: #2F4858;
+    color: #363636;
 
     margin: 20px auto;
     padding: 10px;

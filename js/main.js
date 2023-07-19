@@ -5,6 +5,7 @@ var skill = window.document.querySelector('.skills')
 skill_button.addEventListener("click", myFunction);
 
 function myFunction() {
+  console.log("click")
     skill.style.width = '100%'
     skill.style.display = "flex"
 
