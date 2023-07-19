@@ -193,6 +193,23 @@ html {
 }
 
 
+@media screen and (max-width: 540px) {
+    .div_nome div:last-child {
+        display: none;
+
+    }
+
+    .div_nome div:first-child {
+        width: 90%;
+        text-align: center;
+    }
+
+    .div_nome>div p:nth-child(1) {
+        font-size: 3em;
+    }
+
+}
+
 .citacao {
     width: 100%;
     min-height: 60vh;
@@ -356,20 +373,22 @@ html {
 
 }
 
-#works > div:first-child {
+#works>div:first-child {
     color: #363636;
     line-height: 2;
     text-align: center;
     min-height: 20vh;
-    
+
 }
-#works > div:first-child h2 {
+
+#works>div:first-child h2 {
     font-size: 2em;
     font-weight: bold;
-    
+
     color: #363636;
 }
-#works div:first-child h2 span::before{
+
+#works div:first-child h2 span::before {
     content: "";
     position: relative;
     top: 0;
@@ -454,20 +473,23 @@ html {
     display: flex;
     align-items: center;
 }
-#seeall > div {
+
+#seeall>div {
     width: 85%;
     margin: auto;
     line-height: 2;
 
 }
+
 #seeall div>p {
     font-size: .7rem;
     color: #363636;
 }
 
-#seeall > div a span {
+#seeall>div a span {
     font-size: 2rem;
 }
+
 #seeall div a::before {
     background-color: #fff;
 }
@@ -481,25 +503,30 @@ footer {
     place-items: center;
     background-image: linear-gradient(#191919 40%, #191919 60%);
 }
+
 footer>div {
     color: #fff;
     text-align: center;
 }
+
 footer>div p:first-child {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
+
 footer>div p:nth-child(2) {
-    
+
     margin-bottom: 2rem;
 }
+
 footer>div a::before {
     background-color: #05c46b;
 }
+
 .sayhello span {
     color: var(--color-highlight);
-} 
+}
 
 
 
@@ -528,12 +555,6 @@ footer>div a::before {
 
 /*RESPONSIVIDADE*/
 
-@media only screen and (max-width: 672px) {
-    .some_works>div {
-        width: 80%;
-        margin: 1rem;
-    }
-}
 
 @media screen and (max-width: 960px) {
     .citacao>div {
@@ -551,9 +572,6 @@ footer>div a::before {
         font-size: 1em;
     }
 
-    .div_nome>div p:nth-child(3) {
-        font-size: 1.8em;
-    }
 
     .div_nome {
         padding-top: 4rem;

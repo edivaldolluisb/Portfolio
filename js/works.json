@@ -10,7 +10,8 @@
                 "git_hub": ""
             },
             "show_recents": true,
-            "description": "This portfolio showcases the work of a talented beatmaker, demonstrating their ability to produce unique and innovative beats. With a variety of tracks ranging from classic hip hop to modern trap, the portfolio highlights the artist's versatility and their ability to create music that adapts to different styles and genres."
+            "description": "This portfolio showcases the work of a talented beatmaker, demonstrating their ability to produce unique and innovative beats. With a variety of tracks ranging from classic hip hop to modern trap, the portfolio highlights the artist's versatility and their ability to create music that adapts to different styles and genres.",
+            "short_description":"Portfolio"
         },
         {
             "year": "2023",
@@ -18,11 +19,12 @@
             "built_with":["Python","Figma","HTML","CSS","JS","Django","PostgreSQL"],
             "link": {
                 "show": true,
-                "site": "",
+                "site": "https://nlei.up.railway.app/",
                 "git_hub": ""
             },
             "show_recents": true,
-            "description": "Official platform of the Computer Engineering Degree Program, aimed at facilitating the management of resources, grades, information about the course, and the course calendar."
+            "description": "Official platform of the Computer Engineering Degree Program, aimed at facilitating the management of resources, grades, information about the course, and the course calendar.",
+            "short_description":"WebApp"
         },
         {
             "year": "2022",
@@ -30,11 +32,12 @@
             "built_with":["Figma","HTML","CSS","JS","Django","MySQL"],
             "link": {
                 "show": true,
-                "site": "https://rem-oticas.herokuapp.com/",
+                "site": "",
                 "git_hub": "https://github.com/edivaldolluisb/REEM_Oticas"
             },
             "show_recents": true,
-            "description": "It is a university project for the creation of a website for an ophthalmology clinic, in which it is possible to schedule an appointment, shop for ophthalmology products, and a blog session with articles related to eye health."
+            "description": "It is a university project for the creation of a website for an ophthalmology clinic, in which it is possible to schedule an appointment, shop for ophthalmology products, and a blog session with articles related to eye health.",
+            "short_description":"WebApp"
         },
         {
             "year": "2022",
@@ -42,11 +45,12 @@
             "built_with":["Figma","HTML","CSS","JS","JQuery"],
             "link": {
                 "show": true,
-                "site": "https://edivaldolluisb.github.io/comida_ptodos/",
+                "site": "",
                 "git_hub": "https://github.com/edivaldolluisb/comida_ptodos"
             },
             "show_recents": true,
-            "description": "Implementation of the front-end of the academic project Comida P'ra Todos, which aims to reduce food waste, since this waste exacerbates food insecurity, malnutrition and water use at a time when hunger in the world is increasing"
+            "description": "Implementation of the front-end of the academic project Comida P'ra Todos, which aims to reduce food waste, since this waste exacerbates food insecurity, malnutrition and water use at a time when hunger in the world is increasing",
+            "short_description":"WebApp / UI"
         },
         {
             "year": "2022",
@@ -58,7 +62,8 @@
                 "git_hub": "https://github.com/edivaldolluisb/Formula_1"
             },
             "show_recents": false,
-            "description": ""
+            "description": "",
+            "short_description":""
         },
         {
             "year": "2021",
@@ -70,7 +75,8 @@
                 "git_hub": "https://github.com/edivaldolluisb/Ani-Mangalist-Django"
             },
             "show_recents": false,
-            "description": "A web application to store data of animes (cartoons) and mangas (comics made in Japanese style) that are produced in japan."
+            "description": "A web application to store data of animes (cartoons) and mangas (comics made in Japanese style) that are produced in japan.",
+            "short_description":""
         },
         {
             "year": "2021",
@@ -82,7 +88,8 @@
                 "git_hub": ""
             },
             "show_recents": false,
-            "description": "An e-commerce for selling national products."
+            "description": "An e-commerce for selling national products.",
+            "short_description":""
         }
 
     ]
