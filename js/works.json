@@ -1,5 +1,45 @@
 {
     "works": [
+        
+        {
+            "year": "2024",
+            "title": "Note app",
+            "built_with":["React","JWT","Django", "Axios"],
+            "link": {
+                "show": true,
+                "site": "",
+                "git_hub": "https://github.com/edivaldolluisb/Note"
+            },
+            "show_recents": true,
+            "description": "Literally a simple notes app",
+            "short_description":"Note app"
+        },
+        {
+            "year": "2024",
+            "title": "PassIn Backend",
+            "built_with":["Nodejs","Prisma", "FastApi"],
+            "link": {
+                "show": true,
+                "site": "",
+                "git_hub": "https://github.com/edivaldolluisb/PassIn-Node"
+            },
+            "show_recents": true,
+            "description": "Application for managing participants in in-person events. It allows organizers to create events, register participants, and facilitate check-in on the day of the event.",
+            "short_description":"Manage participants app"
+        },
+        {
+            "year": "2024",
+            "title": "PassIn Frontend",
+            "built_with":["React","tailwind"],
+            "link": {
+                "show": true,
+                "site": "",
+                "git_hub": "https://github.com/edivaldolluisb/PassIn"
+            },
+            "show_recents": true,
+            "description": "Application for managing participants in in-person events. It allows organizers to create events, register participants, and facilitate check-in on the day of the event.",
+            "short_description":"Manage participants app"
+        },
         {
             "year": "2023",
             "title": "Braian Beats",
