@@ -11,7 +11,7 @@ function readfromJson() {
             createTable(data.works);
 
 
-        }).catch(error => console.log("Erro ao tentar ler o ficheiro: " + error));
+        }).catch(() => {});
 
 }
 readfromJson()

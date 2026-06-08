@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&family=Montserrat:wght@300&family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 
 :root{
     --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
@@ -22,7 +22,7 @@ header h1{
     font-size: 3em;
 }
 header p{
-    color: #3899DB;
+    color: oklch(62% 0.14 231);
     font-weight: bold;
     font-size: 1.3em;
     font-family: 'Ubuntu Mono', monospace;
@@ -37,7 +37,7 @@ table {
 }
 thead{
     font-weight: bolder;
-    color: #363636;
+    color: oklch(26% 0.008 270);
 }
   
 th, td {
@@ -45,7 +45,7 @@ th, td {
     padding: 0.6em;
 }
 tbody > tr:hover {
-      background-color: rgb(56, 153, 219, 0.6);
+      background-color: oklch(62% 0.14 231 / 60%);
 }
 tbody > tr td:nth-child(2) {
     font-weight: bolder;
@@ -70,10 +70,10 @@ tbody > tr td:nth-child(3) span {
 }
 .extern_git_links i{
     font-size: 20px;
-    color: #363636;
+    color: oklch(26% 0.008 270);
 }
 .extern_git_links i:hover{
-    color: #3899DB;
+    color: oklch(62% 0.14 231);
 }
 
 .redes_contact{
@@ -89,7 +89,7 @@ tbody > tr td:nth-child(3) span {
 }
 .redes_contact li i{
     font-size: 25px;
-    color:  #363636;
+    color:  oklch(26% 0.008 270);
     transition: var(--transition);
 }
 .redes_contact ul{
@@ -108,7 +108,7 @@ tbody > tr td:nth-child(3) span {
     width: 1px;
     height: 6rem;
     margin: 0px auto;
-    background-color: #363636;
+    background-color: oklch(26% 0.008 270);
 }
 
 .email_contact{
@@ -130,7 +130,7 @@ tbody > tr td:nth-child(3) span {
 
 .email_contact a{
     text-decoration: none;
-    color: #363636;
+    color: oklch(26% 0.008 270);
 
     margin: 20px auto;
     padding: 10px;
@@ -140,7 +140,7 @@ tbody > tr td:nth-child(3) span {
 }
 .email_contact a:hover, .redes_contact li i:hover{
     transform: translateY(-5px);
-    color: #3899DB;
+    color: oklch(62% 0.14 231);
 }
 
 @media screen and (max-width: 800px) {
@@ -149,5 +149,18 @@ tbody > tr td:nth-child(3) span {
     }
     table {
         width: 90%;
+    }
+}
+
+.empty-state td {
+    color: oklch(55% 0.008 270);
+    font-style: italic;
+    padding: 2rem 0.6em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
     }
 }

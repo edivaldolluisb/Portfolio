@@ -1,15 +1,25 @@
 /*skills*/
-var skill_button = window.document.querySelector('.skill_button')
-var skill = window.document.querySelector('.skills')
+const skill_button = document.querySelector('.skill_button');
+const skill_wrapper = document.querySelector('.skills-wrapper');
+const skill_panel = document.querySelector('.skills');
 
-skill_button.addEventListener("click", myFunction);
-
-function myFunction() {
-  console.log("click")
-    skill.style.width = '100%'
-    skill.style.display = "flex"
-
+function toggleSkills() {
+    const open = skill_button.getAttribute('aria-expanded') === 'true';
+    skill_button.setAttribute('aria-expanded', String(!open));
+    skill_wrapper.classList.toggle('is-open', !open);
+    skill_button.classList.toggle('is-open', !open);
 }
+
+skill_button.addEventListener('click', toggleSkills);
+
+skill_panel.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        skill_button.setAttribute('aria-expanded', 'false');
+        skill_wrapper.classList.remove('is-open');
+        skill_button.classList.remove('is-open');
+        skill_button.focus();
+    }
+});
 
 //recent works
 
@@ -25,52 +35,62 @@ function readfromJson() {
             listRecent(data.works)
 
 
-        }).catch(error => console.log("Erro ao tentar ler o ficheiro: " + error));
+        }).catch(() => {});
 
 }
 readfromJson()
 
-// get the works data and create a table row for each work
-let recentWorks = document.querySelector('.some_works');
-function listRecent(array) {
-    const recents = array
-      .filter((work) => work.show_recents !== false)
-      .map((work, index) => `
-               
-        <div class="">
-				<span>0${index+1}</span>
-				<div>
-					<span>0${index+1}</span>
-					<p>${work.title}</p>
-					<span>${work.short_description}</span>
-				</div>
-        ${show_links(work.link)}
-				
-			</div>
-      `)
-      .join("");
-  
-    recentWorks.innerHTML = recents;
-  }
-  
+// get the works data and render as typographic rows
+const recentWorks = document.querySelector('.some_works');
 
-//function to show the links to the work
-function show_links(link) {
-    let links = "";
+function buildLinks(link) {
+    const fragment = document.createDocumentFragment();
     const sites = ["site", "git_hub"];
     sites.forEach((site) => {
         if (link[site] !== "") {
             const icon = site === "site" ? "fa-solid fa-arrow-up-right-from-square" : "fa-brands fa-github";
-            links += `<a class="button_primary" href="${link[site]}" target="_blank" rel="noopener noreferrer">
-            <span><i class="${icon}"></i></span>
-            <svg width="15px" height="10px" viewBox="0 0 13 10">
-              <path d="M1,5 L11,5"></path>
-              <polyline points="8 1 12 5 8 9"></polyline>
-            </svg>
-          </a>`;
-
-
+            const label = site === "site" ? "View project" : "GitHub";
+            const a = document.createElement('a');
+            a.className = 'work-link';
+            a.href = link[site];
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+            a.setAttribute('aria-label', label);
+            const i = document.createElement('i');
+            i.className = icon;
+            i.setAttribute('aria-hidden', 'true');
+            a.appendChild(i);
+            fragment.appendChild(a);
         }
     });
-    return links;
+    return fragment;
+}
+
+function listRecent(array) {
+    recentWorks.innerHTML = '';
+    array
+      .filter((work) => work.show_recents !== false)
+      .forEach((work, index) => {
+          const row = document.createElement('div');
+          row.className = 'work-row';
+
+          const idx = document.createElement('span');
+          idx.className = 'work-index';
+          idx.textContent = String(index + 1).padStart(2, '0');
+
+          const title = document.createElement('p');
+          title.className = 'work-title';
+          title.textContent = work.title;
+
+          const desc = document.createElement('span');
+          desc.className = 'work-desc';
+          desc.textContent = work.short_description;
+
+          const links = document.createElement('div');
+          links.className = 'work-links';
+          links.appendChild(buildLinks(work.link));
+
+          row.append(idx, title, desc, links);
+          recentWorks.appendChild(row);
+      });
 }
