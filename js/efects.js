@@ -90,5 +90,8 @@
       },
       n = i.screen.init("liquid", null, !0),
       a = n.ctx;
-  n.resize(), t = new e(n.width, n.height, 6, "#363636", "#363636"), o()
+  var dark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches,
+      c1 = dark ? "#1b3a5c" : "#d3e2f1",
+      c2 = dark ? "#0e1f33" : "#eaf2fa";
+  n.resize(), t = new e(n.width, n.height, 6, c1, c2), o()
 }();

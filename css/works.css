@@ -13,18 +13,23 @@ main{
 }
 
 header{
-    width: 60%;
-    margin: auto;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 clamp(1.25rem, 5vw, 2rem);
     text-align: left;
 }
 header h1{
     margin-bottom: 0.5rem;
-    font-size: 3em;
+    font-size: clamp(2.25rem, 5vw, 3.25rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--color-ink);
 }
 header p{
-    color: oklch(62% 0.14 231);
-    font-weight: bold;
-    font-size: 1.3em;
+    color: var(--color-accent);
+    font-weight: 700;
+    font-size: 1.1rem;
     font-family: 'Ubuntu Mono', monospace;
 }
 
@@ -32,36 +37,48 @@ header p{
 /*tabela*/
 table {
     border-collapse: collapse;
-    width: 60%;
-    margin: 4rem auto 1rem;
+    width: 100%;
+    max-width: 900px;
+    margin: 3rem auto 1rem;
+    padding: 0 clamp(1.25rem, 5vw, 2rem);
 }
-thead{
-    font-weight: bolder;
-    color: oklch(26% 0.008 270);
+thead th {
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--color-ink-soft);
+    border-bottom: 1px solid var(--color-line);
 }
-  
+
 th, td {
     text-align: left;
-    padding: 0.6em;
+    padding: 0.9em 0.75em;
+}
+tbody > tr {
+    border-bottom: 1px solid var(--color-line);
+    transition: background-color 0.2s ease-out;
 }
 tbody > tr:hover {
-      background-color: oklch(62% 0.14 231 / 60%);
+    background-color: var(--color-accent-soft);
 }
 tbody > tr td:nth-child(2) {
-    font-weight: bolder;
+    font-weight: 700;
+    color: var(--color-ink);
 }
 tbody > tr td:first-of-type {
-    color: rgb(56, 153, 219);
-    /*font-family: 'Montserrat', sans-serif;*/
+    color: var(--color-accent);
     font-family: 'Ubuntu Mono', monospace;
-    font-weight: bolder;
+    font-weight: 700;
 }
 tbody > tr td:nth-child(3){
-    font-size: 0.8em;
+    font-size: 0.82rem;
+    color: var(--color-ink-soft);
 }
 tbody > tr td:nth-child(3) span {
     display: inline-block;
-    margin: 0px 5px;
+    margin: 0px 4px;
+    opacity: 0.5;
 }
 .extern_git_links{
       display: flex;
@@ -70,10 +87,10 @@ tbody > tr td:nth-child(3) span {
 }
 .extern_git_links i{
     font-size: 20px;
-    color: oklch(26% 0.008 270);
+    color: var(--color-ink-soft);
 }
 .extern_git_links i:hover{
-    color: oklch(62% 0.14 231);
+    color: var(--color-accent);
 }
 
 .redes_contact{
@@ -89,7 +106,7 @@ tbody > tr td:nth-child(3) span {
 }
 .redes_contact li i{
     font-size: 25px;
-    color:  oklch(26% 0.008 270);
+    color: var(--color-ink-soft);
     transition: var(--transition);
 }
 .redes_contact ul{
@@ -108,7 +125,7 @@ tbody > tr td:nth-child(3) span {
     width: 1px;
     height: 6rem;
     margin: 0px auto;
-    background-color: oklch(26% 0.008 270);
+    background-color: var(--color-ink-soft);
 }
 
 .email_contact{
@@ -130,7 +147,7 @@ tbody > tr td:nth-child(3) span {
 
 .email_contact a{
     text-decoration: none;
-    color: oklch(26% 0.008 270);
+    color: var(--color-ink-soft);
 
     margin: 20px auto;
     padding: 10px;
@@ -140,7 +157,7 @@ tbody > tr td:nth-child(3) span {
 }
 .email_contact a:hover, .redes_contact li i:hover{
     transform: translateY(-5px);
-    color: oklch(62% 0.14 231);
+    color: var(--color-accent);
 }
 
 @media screen and (max-width: 800px) {

@@ -11,7 +11,7 @@
     left:0;
     overflow:hidden;
     height:100vh;
-    width:100vw;
+    width:100%;
     margin:auto;
 }
 canvas{
