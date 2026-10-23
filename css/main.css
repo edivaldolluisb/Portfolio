@@ -24,6 +24,15 @@ html, body {
     --color-accent-soft: oklch(62% 0.14 231 / 12%);
     --nav-bg: oklch(100% 0 0 / 62%);
     --shadow-color: 231 40% 20%;
+
+    /* stained glass */
+    --glass-blue: oklch(62% 0.14 231);
+    --glass-violet: oklch(45% 0.09 277);
+    --glass-gold: oklch(80% 0.14 85);
+    --glass-red: oklch(55% 0.17 25);
+    --glass-lilac: oklch(70% 0.1 310);
+    --glass-tint: 24%;
+    --glass-lit: 40%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,6 +50,8 @@ html, body {
         --color-bg2: oklch(45% 0.09 277);
         --nav-bg: oklch(17% 0.012 270 / 68%);
         --shadow-color: 231 40% 3%;
+        --glass-tint: 26%;
+        --glass-lit: 55%;
     }
 }
 
@@ -238,6 +249,7 @@ body {
     margin: 0 auto;
     padding: 5rem clamp(1.25rem, 5vw, 4rem) 3rem;
     position: relative;
+    isolation: isolate;
 
     display: grid;
     grid-template-columns: 1.05fr 0.95fr;
@@ -247,19 +259,6 @@ body {
 
 .div_nome div:nth-child(1) {
     line-height: 1.6;
-}
-
-.div_nome div:nth-child(2) {
-    display: flex;
-    justify-content: center;
-}
-
-.div_nome img {
-    position: static;
-    width: 100%;
-    max-width: 460px;
-    height: auto;
-    filter: drop-shadow(0 24px 60px oklch(62% 0.14 231 / 22%));
 }
 
 .div_nome .eyebrow {
@@ -307,10 +306,6 @@ body {
         gap: 1.5rem;
         text-align: left;
     }
-
-    .div_nome div:nth-child(2) {
-        display: none;
-    }
 }
 
 .citacao {
@@ -334,7 +329,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.citacao p {
+.citacao p:not(.episode) {
     line-height: 1.6;
     margin-bottom: 1.5rem;
     color: var(--color-ink-soft);
@@ -343,18 +338,12 @@ body {
     max-width: 60ch;
 }
 
-.citacao .skill_button {
-    margin: 0;
-}
-
 .citacao>div {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/*botão skills*/
-.skill_button,
 .button_primary {
     position: relative;
     margin: auto;
@@ -366,7 +355,6 @@ body {
     cursor: pointer;
 }
 
-.skill_button:before,
 .button_primary::before {
     content: "";
     position: absolute;
@@ -380,7 +368,6 @@ body {
     transition: all 0.3s ease-out;
 }
 
-.skill_button span,
 .button_primary span {
     position: relative;
     font-size: 18px;
@@ -389,7 +376,6 @@ body {
     color: var(--color-ink);
 }
 
-.skill_button svg,
 .button_primary svg {
     position: relative;
     top: 0;
@@ -403,103 +389,81 @@ body {
     transition: transform 0.3s ease-out;
 }
 
-.skill_button:hover:before,
 .button_primary:hover:before {
     width: 100%;
     background: oklch(26% 0.008 270 / 49%);
 }
 
-.skill_button:hover svg,
 .button_primary:hover svg {
     transform: translateX(0);
 }
 
-.skill_button.is-open svg {
-    transform: rotate(90deg);
-}
-
-.skill_button.is-open:hover svg {
-    transform: rotate(90deg);
-}
-
-.skill_button:active,
 .button_primary:active {
     transform: scale(0.95);
 }
 
 /*SkILLS*/
 
-.skills-wrapper {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.45s cubic-bezier(0.16, 1, 0.3, 1);
-}
+.glass-front { --tile: var(--glass-blue); }
+.glass-frameworks { --tile: var(--glass-violet); }
+.glass-languages { --tile: var(--glass-gold); }
+.glass-databases { --tile: var(--glass-red); }
+.glass-design { --tile: var(--glass-lilac); }
 
-.skills-wrapper.is-open {
-    grid-template-rows: 1fr;
-}
-
-.skills {
-    overflow: hidden;
-    min-height: 0;
-    background-color: var(--color-surface);
-    border-top: 1px solid var(--color-line);
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    padding: 2.5rem 10%;
-}
-
-.skill-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-.skill-tags {
+.glass-legend {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.5rem 1.25rem;
+    list-style: none;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    color: var(--color-ink-soft);
 }
 
-.skill-tags span {
+.glass-legend li::before {
+    content: "";
     display: inline-block;
-    padding: 0.3rem 0.75rem;
-    background-color: var(--color-surface-alt);
-    border: 1px solid var(--color-line);
-    border-radius: 4px;
-    font-size: 0.85rem;
-    color: var(--color-ink);
-    font-weight: 500;
-    letter-spacing: 0.01em;
+    width: 0.65rem;
+    height: 0.65rem;
+    margin-right: 0.4rem;
+    vertical-align: -0.05em;
+    background-color: var(--tile);
 }
 
-.edit {
-    display: inline-block;
-    padding: 0.35rem 0.85rem;
-    background: var(--color-bg2);
-    text-transform: uppercase;
-    font-size: 0.72rem;
+/* flex-grow fills every row, so the mosaic never ends ragged */
+.glass-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    list-style: none;
+}
+
+.glass-skills li {
+    flex: 1 1 120px;
+    height: 64px;
+    display: grid;
+    place-items: center;
+    padding: 0 0.75rem;
+    font-size: 0.9rem;
     font-weight: 700;
-    letter-spacing: 0.06em;
-    color: var(--color-highlight);
-    border-radius: 1em;
+    color: var(--color-ink);
+    background-color: color-mix(in oklab, var(--tile) var(--glass-tint), var(--color-surface));
+    transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
-@media screen and (max-width: 640px) {
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 2rem 5%;
-        gap: 1.5rem;
-    }
+.glass-skills li:hover {
+    background-color: color-mix(in oklab, var(--tile) var(--glass-lit), var(--color-surface));
+    box-shadow: 0 0 28px color-mix(in oklab, var(--tile) 50%, transparent);
+    position: relative;
 }
 
-@media screen and (max-width: 380px) {
-    .skills-grid {
-        grid-template-columns: 1fr;
+.glass-skills .wide {
+    flex-basis: 240px;
+}
+
+@media screen and (max-width: 600px) {
+    .glass-skills .wide {
+        flex-basis: 120px;
     }
 }
 
@@ -530,7 +494,7 @@ body {
     margin-bottom: 0.4rem;
 }
 
-#works>div:first-child p {
+#works>div:first-child p:not(.episode) {
     font-size: 0.95rem;
     color: var(--color-ink-soft);
 }
@@ -572,16 +536,74 @@ body {
     transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.some_works > .work-row:hover {
+.some_works > .work-row:is(:hover, :focus-within) {
     background-color: var(--color-accent-soft);
 }
 
-.some_works > .work-row:hover::before {
+.some_works > .work-row:is(:hover, :focus-within)::before {
     transform: scaleY(1);
 }
 
-.some_works > .work-row:hover .work-title {
+.some_works > .work-row:is(:hover, :focus-within) .work-title {
     color: var(--color-accent);
+}
+
+/* row opens on hover/focus; always open on touch screens */
+.work-more {
+    grid-column: 2 / -1;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.work-more > div {
+    overflow: hidden;
+    min-height: 0;
+}
+
+.work-more p {
+    padding-top: 0.6rem;
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: var(--color-ink-soft);
+    max-width: 60ch;
+}
+
+.work-row:is(:hover, :focus-within) .work-more {
+    grid-template-rows: 1fr;
+}
+
+@media (hover: none) {
+    .work-more {
+        grid-template-rows: 1fr;
+    }
+}
+
+.work-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    padding: 0.6rem 0 0.25rem;
+}
+
+.work-tags span {
+    padding: 0.15rem 0.55rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--color-ink);
+    background-color: var(--color-surface-alt);
+    border: 1px solid var(--color-line);
+    border-radius: 3px;
+}
+
+.work-tags::after {
+    content: "";
+    flex-basis: 100%;
+    height: 3px;
+    margin-top: 0.5rem;
+    background: linear-gradient(90deg,
+        var(--glass-blue) 0 25%, var(--glass-gold) 25% 50%,
+        var(--glass-violet) 50% 75%, var(--glass-red) 75%);
 }
 
 .work-index {
@@ -693,13 +715,13 @@ footer>div {
     text-align: center;
 }
 
-footer>div p:first-child {
+footer .ep-title {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
 
-footer>div p:nth-child(2) {
+footer>div p:nth-child(3) {
 
     margin-bottom: 2rem;
 }

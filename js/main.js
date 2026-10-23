@@ -1,26 +1,3 @@
-/*skills*/
-const skill_button = document.querySelector('.skill_button');
-const skill_wrapper = document.querySelector('.skills-wrapper');
-const skill_panel = document.querySelector('.skills');
-
-function toggleSkills() {
-    const open = skill_button.getAttribute('aria-expanded') === 'true';
-    skill_button.setAttribute('aria-expanded', String(!open));
-    skill_wrapper.classList.toggle('is-open', !open);
-    skill_button.classList.toggle('is-open', !open);
-}
-
-skill_button.addEventListener('click', toggleSkills);
-
-skill_panel.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        skill_button.setAttribute('aria-expanded', 'false');
-        skill_wrapper.classList.remove('is-open');
-        skill_button.classList.remove('is-open');
-        skill_button.focus();
-    }
-});
-
 //recent works
 
 // fetch works.json 
@@ -66,17 +43,20 @@ function buildLinks(link) {
     return fragment;
 }
 
+// works.html marks its list with data-all: every work, year instead of index
 function listRecent(array) {
+    const showAll = 'all' in recentWorks.dataset;
     recentWorks.innerHTML = '';
     array
-      .filter((work) => work.show_recents !== false)
+      .filter((work) => showAll || work.show_recents !== false)
       .forEach((work, index) => {
           const row = document.createElement('div');
           row.className = 'work-row';
+          row.tabIndex = 0;
 
           const idx = document.createElement('span');
           idx.className = 'work-index';
-          idx.textContent = String(index + 1).padStart(2, '0');
+          idx.textContent = showAll ? work.year : String(index + 1).padStart(2, '0');
 
           const title = document.createElement('p');
           title.className = 'work-title';
@@ -90,7 +70,23 @@ function listRecent(array) {
           links.className = 'work-links';
           links.appendChild(buildLinks(work.link));
 
-          row.append(idx, title, desc, links);
+          // details revealed when the row opens
+          const more = document.createElement('div');
+          more.className = 'work-more';
+          const moreInner = document.createElement('div');
+          const fullDesc = document.createElement('p');
+          fullDesc.textContent = work.description;
+          const tags = document.createElement('div');
+          tags.className = 'work-tags';
+          work.built_with.forEach((tech) => {
+              const tag = document.createElement('span');
+              tag.textContent = tech;
+              tags.appendChild(tag);
+          });
+          moreInner.append(fullDesc, tags);
+          more.appendChild(moreInner);
+
+          row.append(idx, title, desc, links, more);
           recentWorks.appendChild(row);
       });
 }

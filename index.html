@@ -35,8 +35,6 @@
 		<i class="fa-solid fa-bars" id="icone_menu"></i>
 	</nav>
 	<section id="home">
-		<div class="wrap-2"><canvas id="liquid"></canvas></div>
-
 		<div class="div_nome">
 			<div>
 				<p class="eyebrow">Software Engineer</p>
@@ -44,75 +42,48 @@
 				<p>I build things for the web.</p>
 				<p>Frontend and full-stack developer crafting clean, fast interfaces from Lisbon.</p>
 			</div>
-			<div>
-				<img src="./images/WeirdBubble1536x792.png" alt="Abstract bubble illustration">
-			</div>
+			<div class="vitral" aria-hidden="true"></div>
 		</div>
-		<div class="citacao">
+		<div class="citacao ep-scene">
 			<div>
-				<h2>Technologies</h2>
+				<p class="episode">Episode 01 · Skills</p>
+				<h2 class="ep-title">Technologies</h2>
 				<p>
 					Interested in the entire frontend spectrum and working
 					on amazing projects with great and positive people.
 				</p>
-				<button class="skill_button" aria-expanded="false" aria-controls="skills-panel">
-					<span>My Skills</span>
-					<svg width="15px" height="10px" viewBox="0 0 13 10" aria-hidden="true">
-						<path d="M1,5 L11,5"></path>
-						<polyline points="8 1 12 5 8 9"></polyline>
-					</svg>
-				</button>
+				<ul class="glass-legend" aria-hidden="true">
+					<li class="glass-front">Front-end</li>
+					<li class="glass-frameworks">Frameworks</li>
+					<li class="glass-languages">Languages</li>
+					<li class="glass-databases">Databases</li>
+					<li class="glass-design">Design</li>
+				</ul>
+				<ul class="glass-skills">
+					<li class="glass-front wide" style="--i:0">React</li>
+					<li class="glass-front" style="--i:1">HTML</li>
+					<li class="glass-front" style="--i:2">CSS</li>
+					<li class="glass-languages wide" style="--i:3">JavaScript</li>
+					<li class="glass-frameworks wide" style="--i:4">Django</li>
+					<li class="glass-frameworks" style="--i:5">Node.js</li>
+					<li class="glass-languages wide" style="--i:6">Python</li>
+					<li class="glass-languages" style="--i:7">Java</li>
+					<li class="glass-languages" style="--i:8">C</li>
+					<li class="glass-databases wide" style="--i:9">PostgreSQL</li>
+					<li class="glass-databases" style="--i:10">MySQL</li>
+					<li class="glass-databases" style="--i:11">SQLite3</li>
+					<li class="glass-databases" style="--i:12">MongoDB</li>
+					<li class="glass-databases" style="--i:13">Redis</li>
+					<li class="glass-databases" style="--i:14">Cassandra</li>
+					<li class="glass-design wide" style="--i:15">Figma</li>
+				</ul>
 			</div>
-		</div>
-		<div class="skills-wrapper">
-		<div class="skills" id="skills-panel">
-			<div class="skills-grid">
-				<div class="skill-group">
-					<div class="edit">Front-end</div>
-					<div class="skill-tags">
-						<span>HTML</span>
-						<span>CSS</span>
-						<span>JavaScript</span>
-						<span>ReactJS</span>
-					</div>
-				</div>
-				<div class="skill-group">
-					<div class="edit">Design</div>
-					<div class="skill-tags">
-						<span>Figma</span>
-					</div>
-				</div>
-				<div class="skill-group">
-					<div class="edit">Languages</div>
-					<div class="skill-tags">
-						<span>Python</span>
-						<span>JavaScript</span>
-						<span>Java</span>
-						<span>C</span>
-					</div>
-				</div>
-				<div class="skill-group">
-					<div class="edit">Databases</div>
-					<div class="skill-tags">
-						<span>PostgreSQL</span>
-						<span>MySQL</span>
-						<span>SQLite3</span>
-					</div>
-				</div>
-				<div class="skill-group">
-					<div class="edit">Frameworks</div>
-					<div class="skill-tags">
-						<span>Django</span>
-						<span>Node.js</span>
-					</div>
-				</div>
-			</div>
-		</div>
 		</div>
 	</section>
-	<section id="works">
+	<section id="works" class="ep-scene">
 		<div>
-			<h2>Crafted with love.</h2>
+			<p class="episode">Episode 02 · Projects</p>
+			<h2 class="ep-title">Crafted with love.</h2>
 			<p>Here are a few things I've built recently.</p>
 		</div>
 		<div class="some_works"></div>
@@ -129,9 +100,10 @@
 			</div>
 		</div>
 	</section>
-	<footer>
+	<footer class="ep-scene">
 		<div>
-			<p>Let's work together.</p>
+			<p class="episode">Episode 03 · Contact</p>
+			<p class="ep-title">Let's work together.</p>
 			<p>I'm available for freelance work.</p>
 			<a class="button_primary sayhello" href="./contact.html">
 				<span>SAY HELLO</span>
@@ -160,9 +132,6 @@
 		}
 	}
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-	integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="./js/menu.js"></script>
 
 </html>

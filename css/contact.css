@@ -9,8 +9,12 @@
     font-size: 4rem;
 }
 
-#contact p {
+#contact p:not(.episode) {
     font-size: 1rem;
+}
+
+#contact .episode {
+    text-align: center;
 }
 
 .text1 {

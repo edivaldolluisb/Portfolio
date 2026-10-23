@@ -1,6 +1,45 @@
 {
     "works": [
-        
+
+        {
+            "year": "2026",
+            "title": "Equator Crossing",
+            "built_with":["Next.js"],
+            "link": {
+                "show": true,
+                "site": "https://equatorcrossing.com",
+                "git_hub": ""
+            },
+            "show_recents": true,
+            "description": "Website for open-water swimming expeditions across the equator, a 3.8 km swim from Rolas islet to São Tomé. I owned it end to end, from architecture design to implementation.",
+            "short_description":"Tourism website"
+        },
+        {
+            "year": "2026",
+            "title": "Vanplega",
+            "built_with":["FastAPI","React","React Native"],
+            "link": {
+                "show": true,
+                "site": "https://vanplega.com",
+                "git_hub": ""
+            },
+            "show_recents": true,
+            "description": "Real estate platform for houses and land in São Tomé and Príncipe, with a web app and a mobile app. I owned it end to end, from architecture design to implementation.",
+            "short_description":"Real estate platform"
+        },
+        {
+            "year": "2026",
+            "title": "KeCa",
+            "built_with":["FastAPI","React","React Native"],
+            "link": {
+                "show": true,
+                "site": "https://keca.care",
+                "git_hub": ""
+            },
+            "show_recents": true,
+            "description": "KeCa, Care and Compassion: web and mobile platform. I owned it end to end, from architecture design to implementation.",
+            "short_description":"Web & mobile app"
+        },
         {
             "year": "2024",
             "title": "Note app",
