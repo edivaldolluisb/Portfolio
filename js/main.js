@@ -49,6 +49,7 @@ function listRecent(array) {
     recentWorks.innerHTML = '';
     array
       .filter((work) => showAll || work.show_recents !== false)
+      .slice(0, showAll ? undefined : 5)
       .forEach((work, index) => {
           const row = document.createElement('div');
           row.className = 'work-row';
